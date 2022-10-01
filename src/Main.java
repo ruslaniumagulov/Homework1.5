@@ -38,5 +38,17 @@ public class Main {
             if (clientOS == 1 && clientDeviceYear < 2015)
                 System.out.println("Версия системы Android устарела. Установите облегченную версию приложения для Android по ссылке");
         }
+        // Задание 3
+        System.out.println("Задание 3");
+        System.out.println("Программа, которая вычисляет, является ли год високосным");
+        int year = 2021;
+
+        boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+
+        if (isLeapYear) {
+            System.out.println(year + " год является високосным.");
+        } else {
+            System.out.println(year + " год не является високосным.");
+        }
     }
 }
