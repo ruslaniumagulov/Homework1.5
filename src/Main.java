@@ -50,5 +50,20 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным.");
         }
+        // Задание 4
+        System.out.println("Задание 4");
+        System.out.println("Программа вычесления срока доставки продукта компании (банковской карты)");
+        double deliveryWithin = 95;
+        double maxKmPerFirstDay = 20;
+        double maxKmPerEveryNextDays = 40;
+        double firstDayPerDelivery = 1;
+        double nextDaysPerDelivery = ((deliveryWithin - maxKmPerFirstDay) / maxKmPerEveryNextDays);
+        double deliveryTime = nextDaysPerDelivery + firstDayPerDelivery;
+        if (Math.ceil(deliveryTime) <= 1) {
+            System.out.println("Потребуется " + Math.ceil(deliveryTime) + " день");
+        } else {
+            System.out.println("Потребуется дней: " + Math.ceil(deliveryTime));
+        }
+
     }
 }
